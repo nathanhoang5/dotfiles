@@ -14,7 +14,6 @@ install_files() {
 
 }
 
-
 install_dotfiles() {
     sourcedir=$(pwd -P)
     for file in zshrc gitconfig tmux.conf ; do
@@ -24,16 +23,12 @@ install_dotfiles() {
     done
 }
 
-
 install_vscode_files() {
     sourcedir=$(pwd -P)
     codeconfigpath="${HOME}/.config/Code - OSS/User"
     install_files "${sourcedir}/keybindings.json" "${codeconfigpath}/keybindings.json"
     install_files "${sourcedir}/settings.json" "${codeconfigpath}/settings.json"
 }
-
-
-
 
 install_fzf() {
    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf

@@ -6,7 +6,8 @@
     "terminal.integrated.profiles.linux": {
         "tmux": {
             "path": "tmux",
-            "icon": "terminal-tmux"
+            "icon": "terminal-tmux",
+            "args": ["new-session", "-A", "-s", "vscode-${workspaceFolder}"]
         }
     }
 

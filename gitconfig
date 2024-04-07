@@ -1,0 +1,11 @@
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	d = diff
+[user]
+	email = nathanhoang5@gmail.com
+	name = Nathan
+[core]
+	editor = vim

@@ -23,4 +23,5 @@ setopt no_share_history
 alias c='code'
 alias tailf='tail ---disable-inotify -F'
 alias path='readlink -f'
+alias m='make'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

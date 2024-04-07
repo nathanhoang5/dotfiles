@@ -9,6 +9,8 @@
             "icon": "terminal-tmux",
             "args": ["new-session", "-A", "-s", "vscode-${workspaceFolder}"]
         }
-    }
+    },
 
+    "clangd.path": "/usr/bin/clangd",
+    "files.trimTrailingWhitespace": true,
 }

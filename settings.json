@@ -7,7 +7,7 @@
         "tmux": {
             "path": "tmux",
             "icon": "terminal-tmux"
-        },
+        }
     }
 
 }

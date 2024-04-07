@@ -3,12 +3,12 @@
 install_files() {
     srcfile=$1
     dstfile=$2
-    echo "source is '$sourcefile', '$srcfile', '$dstfile'"
-    srcfile="${sourcedir}/${file}"
+    echo "source is '$srcfile', '$dstfile'"
     if [ -d "$dstfile" -a ! -h "$dstfile" ]; then 
         mv -fv "$srcfile" "${srcfile}.$(date +%Y%m%d)"
     fi
     if [ ! -h "$dstfile" ]; then
+        echo "linking $srcfile to $dstfile"
         ln -sf "$srcfile" "${dstfile}"
     fi
 

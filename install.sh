@@ -3,12 +3,10 @@
 install_files() {
     srcfile=$1
     dstfile=$2
-    echo "source is '$srcfile', '$dstfile'"
-    if [ -d "$dstfile" -a ! -h "$dstfile" ]; then 
+    if [ -d "$dstfile" -a ! -h "$dstfile" ]; then
         mv -fv "$srcfile" "${srcfile}.$(date +%Y%m%d)"
     fi
     if [ ! -h "$dstfile" ]; then
-        echo "linking $srcfile to $dstfile"
         ln -sf "$srcfile" "${dstfile}"
     fi
 
@@ -16,7 +14,7 @@ install_files() {
 
 install_dotfiles() {
     sourcedir=$(pwd -P)
-    for file in zshrc gitconfig tmux.conf ; do
+    for file in zshrc gitconfig gitignore tmux.conf ; do
         destfile="${HOME}/.${file}"
         sourcefile="${sourcedir}/${file}"
         install_files $sourcefile $destfile
@@ -32,7 +30,7 @@ install_vscode_files() {
 
 install_fzf() {
    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-   echo "y y n" | ~/.fzf/install 
+   echo "y y n" | ~/.fzf/install
 }
 
 install_dotfiles
